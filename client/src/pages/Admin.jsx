@@ -25,7 +25,7 @@ const Admin = () => {
 
     return (
 // Mapped over booking state, display each as list item w unique _id that is used as the key for the list, which helps React efficiently update the DOM.
-// The date is converted into a readable format using toLocaleDateString().
+// The date is converted into a readable format using toLocaleDateString()
         <div>
             <h1>Admin Dashboard</h1>
             <ul>
