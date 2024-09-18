@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-const Booking = () => {
+const Services = () => {
 
     return (
-        <h1>This is Booking.</h1>
+        <h1>This is Services.</h1>
     )
 }
 
-export default Booking;
+export default Services;
