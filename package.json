@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3"
+  },
+  "name": "furry_godmother_pet_spa",
+  "version": "1.0.0",
+  "description": "This is a React site template from Mayanwolfe tut with functional routing and appointment booking using React, Vite, Node, and MongoDB. Note that the project contains a separate Client and Server.",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"No tests specified\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/millan-figueroa/furry_godmother_pet_spa.git"
+  },
+  "keywords": [
+    "pet",
+    "grooming",
+    "appointment",
+    "web",
+    "React",
+    "Node.js"
+  ],
+  "author": "millan-figueroa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/millan-figueroa/furry_godmother_pet_spa/issues"
+  },
+  "homepage": "https://github.com/millan-figueroa/furry_godmother_pet_spa#readme"
+}
