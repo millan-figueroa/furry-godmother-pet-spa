@@ -27,9 +27,33 @@ const groomers = [
 
 const Booking = () => {
 
-    return (
-        <h1>This is Booking.</h1>
-    )
+    // Define state variables for form elements
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [date, setDate] = useState(new Date());
+    const [service, setService] = useState('');
+    const [groomer, setGroomer] = useState('');
+    const navigate = useNavigate();
+
+    // Function to handle submissions, prevents default HTML actions (like page reload)
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch('http://localhost:5000/api/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, date, service, groomer }),
+    });
+
+    // Successful booking message
+        if (response.ok) {
+            alert('Booking for ${name} on ${date.toLocaleDateString()} was successful! Email confirmation sent to ${email}!');
+            navigate('/');
+        } else {
+            alert('Booking failed. Please try again.')
+        }
+    };
 }
 
 export default Booking;
