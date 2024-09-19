@@ -54,6 +54,75 @@ const Booking = () => {
             alert('Booking failed. Please try again.')
         }
     };
-}
+
+
+    // Options for services & groomer dropdowns
+    return (
+        <div>
+            <h2>Book a Service</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor='name'>Pet Name: </label>
+                    <input
+                        id="name"
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label htmlFor='email'>Email: </label>
+                    <input
+                        id="email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label >Date:</label>
+                    {/*See https://www.npmjs.com/package/react-calendar for available config options*/}
+                    <Calendar
+                        onChange={setDate}
+                        value={date}
+                        required
+                    />
+                    <p>Selected Date: {date.toLocaleDateString()}</p>
+                </div>
+                <div>
+                    <label htmlFor="service">Service: </label>
+                    <select
+                        id="service"
+                        value={service}
+                        onChange={(e) => setService(e.target.value)}
+                        required
+                    >
+                        <option value="" disabled>Select a service</option>
+                        {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
+                        ))}
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="groomer">Groomer: </label>
+                    <select
+                        id="groomer"
+                        value={groomer}
+                        onChange={(e) => setGroomer(e.target.value)}
+                    >
+                        <option value="" disabled>Select a groomer (optional)</option>
+                        {groomers.map((groomer, index) => (
+                        <option key={index} value={groomer}>{groomer}</option>
+                        ))}
+                    </select>
+                </div>
+                <button type="submit">Book</button>
+            </form>
+        </div>
+    );
+};
+
 
 export default Booking;
