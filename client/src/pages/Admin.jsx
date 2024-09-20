@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 
 const Admin = () => {
 
-    // Initialize bookings as an empty array to hold booking data fetched from server
+    // Initializes bookings as an empty array to hold booking data fetched from server
     // SetBookings is the function used to update the bookings state.
     const [bookings, setBookings] = useState([]); 
 
@@ -23,8 +23,10 @@ const Admin = () => {
         fetchBookings();
     }, []);
 
+
+    
     return (
-// Mapped over booking state, display each as list item w unique _id that is used as the key for the list, which helps React efficiently update the DOM.
+// Maps over booking state, displays each as list item w unique _id that is used as the key for the list, which helps React efficiently update the DOM.
 // The date is converted into a readable format using toLocaleDateString()
         <div>
             <h1>Admin Dashboard</h1>
