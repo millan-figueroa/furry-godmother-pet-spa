@@ -16,7 +16,7 @@ app.use(express.json()); // Parses incoming JSON requests & makes data avail on 
 
 // Connection to MongoDB using Mongoose w connection string in template literal
 mongoose.connect( 
-    'mongodb+srv://millanfig:${process.env.MONGODB_PASSWORD}@cluster0.emdfm.mongodb.net/furry_godmother_grooming?retryWrites=true&w=majority&appName=Cluster0'
+    'mongodb+srv://millanfig:data1FR@cluster0.emdfm.mongodb.net/furry_godmother?retryWrites=true&w=majority&appName=Cluster0'
 ).then(() => {
     console.log('Connected to MongoDB'); // Sends success or fail message to console
   }).catch((error) => {
