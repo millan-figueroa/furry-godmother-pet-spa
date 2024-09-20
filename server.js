@@ -35,7 +35,18 @@ const BookingSchema = new mongoose.Schema({
 // Model definition -represents collection of bookings in db, allows us to interact using Mongoose methods (save, find, update, etc.)
 const Booking = mongoose.model('Booking', BookingSchema);
 
-// Route setup - defines POST endpoint at /api/bookings. Callback func executes when request is made
+// Route to get all bookings (GET request)
+app.get('/api/bookings', async (req, res) => {
+    try {
+        // Fetches all bookings from the MongoDB database using Mongoose's find() method
+        const bookings = await Booking.find(); // Optionally, you can add filters or sorting here
+        res.json(bookings); // Sends the list of bookings as a JSON response
+    } catch (error) {
+        console.error('Error fetching bookings:', error);
+        res.status(500).json({ message: 'Error fetching bookings' });
+    }
+});
+// Route to create a booking (POST)
 app.post('/api/bookings', async (req, res) => {
     try {
         // The req.body contains the data sent from the client (like name, email, date, etc.). This data is destructured to extract individual fields.

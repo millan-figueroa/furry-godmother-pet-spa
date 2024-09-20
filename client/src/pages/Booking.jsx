@@ -48,7 +48,7 @@ const Booking = () => {
 
     // Successful booking message
         if (response.ok) {
-            alert('Booking for ${name} on ${date.toLocaleDateString()} was successful! Email confirmation sent to ${email}!');
+            alert(`Booking for ${name} on ${date.toLocaleDateString()} was successful! Email confirmation sent to ${email}!`);
             navigate('/');
         } else {
             alert('Booking failed. Please try again.')
