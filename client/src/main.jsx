@@ -8,7 +8,7 @@ import Staff from './pages/Staff';
 import Services from './pages/Services';
 import Booking from './pages/Booking';
 import Admin from './pages/Admin';
-import './index.css';
+import '/src/assets/css/main.css';
 
 //This is where the React components are attached to the "root" div in index.html
 ReactDOM.createRoot(document.getElementById('root')).render(
