@@ -2,6 +2,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Header from './components/Header';
 
 
 //Global header and footer
@@ -9,34 +10,7 @@ import { Link } from 'react-router-dom';
 const App = () => {
   return (
     <div id="page-wrapper">
-      <div id="header-wrapper">
-        <header id="header" className="container">
-          <div id="logo">
-            <h1><a href="/">Furry Godmother</a></h1>
-          </div>
-
-          {/* Nav */}
-          <nav id="nav">
-            <ul>
-              <li className="current" style={{ whiteSpace: 'nowrap' }}>
-                <Link to="/">Welcome</Link>
-              </li>
-              <li style={{ whiteSpace: 'nowrap' }}>
-                <Link to="/services">Services</Link>
-              </li>              
-              <li style={{ whiteSpace: 'nowrap' }}>
-                <Link to="/booking">Booking</Link>
-              </li>
-              <li style={{ whiteSpace: 'nowrap' }}>
-                <Link to="/staff">Staff</Link>
-              </li>
-              <li style={{ whiteSpace: 'nowrap' }}>
-                <Link to="/admin">Admin</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+      <Header />
 
       <div id="main-wrapper">
         <main>
