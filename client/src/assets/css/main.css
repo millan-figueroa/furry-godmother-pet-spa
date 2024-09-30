@@ -1635,7 +1635,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #0090c5;
+		background: #efa4cb;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1939,7 +1939,7 @@ input, select, textarea {
 	}
 
 		#logo h1 {
-			background: #da44ff;
+			background: #efa4cb;
 			color: #fff;
 			border-radius: 40px;
 			font-family: 'Oleo Script', serif;
@@ -2281,6 +2281,7 @@ input, select, textarea {
 			#banner {
 				padding: 4.5em 3em;
 				text-align: center;
+				background-color: #737373;
 			}
 
 				#banner ul {

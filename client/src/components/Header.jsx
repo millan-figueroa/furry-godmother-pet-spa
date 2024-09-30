@@ -46,19 +46,15 @@ const Header = () => {
               </li>
               <li style={{ whiteSpace: 'nowrap' }}>
                 {/* Theme Toggle Button */}
-            <button onClick={toggleTheme} style={{ marginTop: '5px', background: 'none', border: 'none', cursor: 'pointer' }}>
-                <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} size="lg" />
-            </button>
+                <button onClick={toggleTheme} style={{ marginTop: '5px', background: 'none', border: 'none', cursor: 'pointer' }}>
+                    <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} size="lg" />
+                </button>
               </li>
             </ul>
-            
-            
           </nav>
         </header>
       </div>
-
     );
-
 };
 
 export default Header;
