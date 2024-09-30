@@ -123,11 +123,12 @@ input, select, textarea {
 
 	a {
 		color: #0090c5;
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 		a:hover {
 			text-decoration: none;
+			color: #da44ff;
 		}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1938,12 +1939,12 @@ input, select, textarea {
 	}
 
 		#logo h1 {
-			background: #ff4486;
+			background: #da44ff;
 			color: #fff;
-			border-radius: 6px;
+			border-radius: 40px;
 			font-family: 'Oleo Script', serif;
 			font-weight: 400;
-			padding: 0.25em 0.2em 0.25em 0.2em;
+			padding: 0.35em 0.3em 0.35em 0.3em;
 			font-size: 3.25em;
 			letter-spacing: 0.05em;
 			display: inline-block;
