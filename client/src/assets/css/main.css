@@ -1,12 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
 
-/*
-	Verti by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -53,6 +47,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 mark {
@@ -91,13 +86,13 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-color: #f7f7f7;
+		background-color: #F38A6F;
 		background-position: top left, top left;
 		background-repeat: repeat-x, repeat;
 		background-size: 100% 30em, auto;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
-		color: #696969;
+		color: #3e3d3d;
 		font-weight: 300;
 		line-height: 2.25em;
 	}
@@ -128,7 +123,7 @@ input, select, textarea {
 
 		a:hover {
 			text-decoration: none;
-			color: #da44ff;
+			
 		}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1635,7 +1630,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #efa4cb;
+		background: #645069;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1662,7 +1657,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #10a0d5;
+			background: #FAC9DE;
 		}
 
 		input[type="button"]:active,
@@ -1670,7 +1665,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background: #20b0e5;
+			background: #A56E9E;
 		}
 
 		input[type="button"].alt,
@@ -1909,7 +1904,9 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 4.5em 0 3em 0;
+		padding: 3em 0 0 0;
+		margin-bottom: -2em;
+		background: #645069;
 	}
 
 	#features-wrapper {
@@ -1917,7 +1914,7 @@ input, select, textarea {
 	}
 
 	#main-wrapper {
-		background: #fff;
+		background: #E8BBE2;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 		padding: 5em 0 5em 0;
 	}
@@ -1927,48 +1924,37 @@ input, select, textarea {
 	}
 
 /* Header */
-
-	#header {
-		position: relative;
-	}
-
-/* Logo */
-
-	#logo {
-		display: inline-block;
-	}
-
-		#logo h1 {
-			background: #efa4cb;
-			color: #fff;
-			border-radius: 40px;
-			font-family: 'Oleo Script', serif;
-			font-weight: 400;
-			padding: 0.35em 0.3em 0.35em 0.3em;
-			font-size: 3.25em;
-			letter-spacing: 0.05em;
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		#logo span {
-			font-weight: 800;
-			line-height: 4.5em;
-			letter-spacing: 0.025em;
-			font-size: 0.9em;
-			vertical-align: middle;
-			margin: 0 0 0 1.25em;
-		}
-
-/* Nav */
-
-	#nav {
-		position: absolute;
-		right: 0;
-		top: 0;
-		font-size: 0.9em;
-	}
-
+#header {
+	display: flex; /* Align elements horizontally */
+	align-items: center; /* Vertically align logo and nav */
+	justify-content: space-between;
+	padding: 10px 0; /* Adjust padding to control overall height */
+	margin-top: -60px;
+	position: relative; /* Allow fine-tuning of the logo and nav positioning */
+  }
+  
+  /* Logo */
+  #logo {
+	padding: 0; /* Remove extra padding */
+	margin: 0; /* Remove margins */
+	position: relative;
+	top: -10px; /* Adjust to move the logo upwards */
+	left: 0; /* Align to the left */
+  }
+  
+  #logo img {
+	width: 80%; /* Control logo size */
+	height: auto;
+	display: block; /* Prevent extra vertical spacing */
+  }
+  
+  /* Nav */
+  nav {
+	margin-left: auto; /* Push navigation to the right */
+	display: flex; /* Keep nav items aligned horizontally */
+	align-items: center; /* Ensure vertical alignment */
+  }
+  
 		#nav ul {
 			list-style: none;
 			padding-left: 0;
@@ -2317,7 +2303,7 @@ input, select, textarea {
 			}
 
 		/* Nav */
-
+			
 			#page-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;

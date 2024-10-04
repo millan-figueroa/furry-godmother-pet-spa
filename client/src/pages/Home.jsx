@@ -11,7 +11,7 @@ const BannerAndFeatures = () => {
         <div id="banner" className="box container">
           <div className="row">
             <div className="col-7 col-12-medium">
-              <h2>Welcome, pet fam.</h2>
+              <h2>Furry Godmother Spa.</h2>
               <p>We treat your pets like the royalty they are.</p>
             </div>
             <div className="col-5 col-12-medium">

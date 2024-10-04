@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import './assets/css/main.css'; // Adjust the path as needed
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
