@@ -1974,7 +1974,7 @@ input, select, textarea {
 					transition: background-color .25s ease-in-out;
 					font-weight: 800;
 					letter-spacing: 0.025em;
-					color: #696969;
+					color: #fff;
 					text-decoration: none;
 					border-radius: 6px;
 					padding: 0.5em 1em 0.5em 1em;
@@ -1985,7 +1985,7 @@ input, select, textarea {
 				}
 
 				#nav ul li:hover a, #nav ul li:hover span {
-					background: #fff;
+					background: #7D6383;
 				}
 
 				#nav ul li.active a, #nav ul li.active span {
@@ -1993,7 +1993,7 @@ input, select, textarea {
 				}
 
 				#nav ul li.current a {
-					background: #444;
+					background: #7D6383;
 					color: #fff;
 				}
 
