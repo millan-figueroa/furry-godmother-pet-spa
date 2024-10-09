@@ -1,7 +1,7 @@
 import React from 'react';
-import featuredImage1 from '../assets/css/images/dog07.jpg'; // Adjust the path as necessary
-import featuredImage2 from '../assets/css/images/dog02.jpg';
-import featuredImage3 from '../assets/css/images/dog20.jpg';
+import featuredImage1 from '../assets/css/images/dog04.jpg'; // Adjust the path as necessary
+import featuredImage2 from '../assets/css/images/dog05.jpg';
+import featuredImage3 from '../assets/css/images/dog08.jpg';
 
 const BannerAndFeatures = () => {
   return (
@@ -22,7 +22,7 @@ const BannerAndFeatures = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="button alt large icon solid fa-question-circle">
+                  <a href="#" className="button alt large icon solid fa-calendar-days">
                     Book Now
                   </a>
                 </li>

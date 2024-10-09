@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import Logo from "../assets/css/images/furry_godmother_logo.png";
+import Logo from "../assets/css/images/furry_godmother_filled_light.png";
 
 
 
@@ -26,6 +26,9 @@ const Header = () => {
         <header id="header" className="container">
           <div id="logo">
           <img src={Logo} alt="Logo" />
+          
+          {/* <img src="/src/assets/css/images/furry_godmother_logo_filled_light.svg" alt="Logo" /> */}
+          
           </div>
 
           {/* Nav */}
