@@ -86,13 +86,13 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
 		background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-color: #F38A6F;
+		background-color: #222222;
 		background-position: top left, top left;
 		background-repeat: repeat-x, repeat;
 		background-size: 100% 30em, auto;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
-		color: #33272a;
+		color: #222222;
 		font-weight: 300;
 		line-height: 2.25em;
 	}
@@ -117,7 +117,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #0090c5;
+		/* color: #0090c5; */
 		text-decoration: none;
 	}
 
@@ -127,7 +127,7 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #33272a;
+		color: #594a4e;
 		font-weight: 800;
 	}
 
@@ -1573,7 +1573,7 @@ input, select, textarea {
 		}
 
 		table thead {
-			background: #404248;
+			background: #594a4e;
 			color: #fff;
 		}
 
@@ -1675,6 +1675,94 @@ input, select, textarea {
 		.button.alt {
 			background: #ff8ba7;
 			color: #fffffe;
+		}
+
+			input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover,
+			button.alt:hover,
+			.button.alt:hover {
+				background: #e8e8e8;
+				background: #594a4e;
+			}
+
+			input[type="button"].alt:active,
+			input[type="submit"].alt:active,
+			input[type="reset"].alt:active,
+			button.alt:active,
+			.button.alt:active {
+				background: #e4e4e4;
+				background: rgba(0, 0, 0, 0.15);
+			}
+
+		input[type="button"].large,
+		input[type="submit"].large,
+		input[type="reset"].large,
+		button.large,
+		.button.large {
+			font-size: 2.25em;
+			padding: 0.8em 0.9em;
+		}
+
+/* Dark Mode Button Styles */
+
+input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+		-webkit-appearance: none;
+		position: relative;
+		display: inline-block;
+		background: #eebbc3;
+		color: #232946;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 800;
+		outline: 0;
+		border: 0;
+		cursor: pointer;
+		font-size: 1.35em;
+		padding: 0.6em 1.5em;
+	}
+
+		input[type="button"].icon:before,
+		input[type="submit"].icon:before,
+		input[type="reset"].icon:before,
+		button.icon:before,
+		.button.icon:before {
+			position: relative;
+			margin-right: 0.5em;
+			top: 0.05em;
+		}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		button:hover,
+		.button:hover {
+			background: #b8c1ec;
+		}
+
+		/* input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background: #A56E9E;
+		} */
+
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		button.alt,
+		.button.alt {
+			background: #eebbc3;
+			color: #232946;
 		}
 
 			input[type="button"].alt:hover,
@@ -1894,7 +1982,7 @@ input, select, textarea {
 				}
 
 				.widget.contact ul li a:hover {
-					background: #444444;
+					background: #c3f0ca;
 				}
 
 				.widget.contact ul li a:active {
@@ -1916,9 +2004,9 @@ input, select, textarea {
 		border-bottom: 2px solid white ;
 	}
 
-	#banner-wrapper.box-container {
+	/* #banner-wrapper.box-container {
 		background-color: #f48a72;
-	}
+	} */
 
 	#features-wrapper {
 		padding: 3em 0 3em 0;
@@ -1934,16 +2022,16 @@ input, select, textarea {
 
 	/* Dark mode styles */
 	.dark-mode #main-wrapper {
-	background-color: #645069;
-	color: #FFF;
+		background-color: #232946;
+		color: #fffffe;
 	}
 
 	.dark-mode #header-wrapper,
-	.dark-mode #banner-wrapper, 
 	.dark-mode #footer-wrapper {
-	background-color: #705976;
-	color: #FFF;
+		background-color: #b8c1ec;
+		color: #121629;
 	}
+	
 
 /* Header */
 #header {
