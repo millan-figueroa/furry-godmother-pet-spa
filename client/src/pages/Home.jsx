@@ -22,7 +22,7 @@ const BannerAndFeatures = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="button alt large icon solid fa-calendar-days">
+                  <a href="#" className="button alt large icon solid fa-question-circle">
                     Book Now
                   </a>
                 </li>
