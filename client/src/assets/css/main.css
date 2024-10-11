@@ -2052,6 +2052,7 @@ input, select, textarea {
 	padding: 10px 0; /* Adjust padding to control overall height */
 	margin-top: -60px;
 	position: relative; /* Allow fine-tuning of the logo and nav positioning */
+	margin-left: 30px;
   }
   
   /* Logo */
@@ -2152,6 +2153,55 @@ input, select, textarea {
 		color: #232946;
 	}
 
+	/* Right-side buttons (login & dark mode) */
+.header-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align buttons all the way to the right */
+	margin-right: -90px;
+	margin-left: 80px;
+  }
+  
+  .login-btn {
+	background-color: #594A4E;
+	border: 1px solid #ccc;
+	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
+	margin-right: 10px; /* Space between login and dark mode toggle */
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 0.85em; /* Slightly smaller font */
+  }
+  
+  .dark-mode-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+  
+  /* Hover and focus effects for buttons */
+  .login-btn:hover {
+	background-color: #ddd;
+  }
+  
+  .dark-mode-toggle:hover {
+	opacity: 0.8;
+  }
+  
+  /* Dark mode styles for buttons */
+  .dark-mode .login-btn {
+	background-color: #333;
+	color: #fff;
+  }
+  
+  .dark-mode .login-btn:hover {
+	background-color: #444;
+  }
+  
+  .dark-mode .dark-mode-toggle {
+	color: #fff;
+  }
+
+  /* Dropdown Menu */
 
 	.dropotron {
 		background: #fff;

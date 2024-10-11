@@ -1,4 +1,4 @@
-import React from 'react';
+
 import featuredImage1 from '../assets/css/images/dog04.jpg'; // Adjust the path as necessary
 import featuredImage2 from '../assets/css/images/dog05.jpg';
 import featuredImage3 from '../assets/css/images/dog08.jpg';
