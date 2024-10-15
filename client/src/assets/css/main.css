@@ -1660,13 +1660,13 @@ input, select, textarea {
 			background: #594a4e;
 		}
 
-		/* input[type="button"]:active,
+		input[type="button"]:active,
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
 			background: #A56E9E;
-		} */
+		}
 
 		input[type="button"].alt,
 		input[type="submit"].alt,
@@ -1718,7 +1718,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		background: #b8c1ec;
+		background: #eebbc3;
 		color: #232946;
 		text-decoration: none;
 		border-radius: 6px;
@@ -1748,13 +1748,13 @@ input, select, textarea {
 			background: #eebbc3;
 		}
 
-		/* input[type="button"]:active,
+		input[type="button"]:active,
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
 			background: #A56E9E;
-		} */
+		}
 
 		.dark-mode input[type="button"].alt,
 		.dark-mode input[type="submit"].alt,
@@ -1791,6 +1791,66 @@ input, select, textarea {
 			font-size: 2.25em;
 			padding: 0.8em 0.9em;
 		}
+
+
+/* Right-side buttons (login & dark mode) */
+
+.header-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align buttons all the way to the right */
+	margin-right: -90px;
+	margin-left: 80px;
+  }
+  
+  .login-btn {
+	background-color: #594A4E;
+	border: 1px solid #ccc;
+	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
+	margin-right: 10px; /* Space between login and dark mode toggle */
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1.1em; /* Slightly smaller font */
+	font-weight: 400;
+  }
+  
+  button.dark-mode-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+  
+
+  /* Hover and focus effects for buttons */
+
+  .login-btn:hover {
+	background-color: #ddd;
+  }
+  
+  .dark-mode-toggle:hover {
+	opacity: 0.8;
+  }
+  
+  /* Dark mode styles for buttons */
+  .dark-mode .login-btn {
+	background-color: #b8c1ec;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
+	margin-right: 10px; /* Space between login and dark mode toggle */
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1.1em; /* Slightly smaller font */
+	font-weight: 400;
+  }
+  
+  .dark-mode .login-btn:hover {
+	background-color: #444;
+  }
+  
+  .dark-mode .dark-mode-toggle {
+	color: #fff;
+  }
 
 /* List */
 
@@ -2024,7 +2084,6 @@ input, select, textarea {
 	}
 
 	
-
 	#footer-wrapper {
 		padding: 6em 0 8em 0;
 		background: #ffc6c7;
@@ -2039,7 +2098,7 @@ input, select, textarea {
 
 	.dark-mode #header-wrapper,
 	.dark-mode #footer-wrapper {
-		background-color: #eebbc3;
+		background-color: #b8c1ec;
 		color: #121629;
 	}
 	
@@ -2153,118 +2212,8 @@ input, select, textarea {
 		color: #232946;
 	}
 
-	/* Right-side buttons (login & dark mode) */
-.header-buttons {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end; /* Align buttons all the way to the right */
-	margin-right: -90px;
-	margin-left: 80px;
-  }
-  
-  .login-btn {
-	background-color: #594A4E;
-	border: 1px solid #ccc;
-	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
-	margin-right: 10px; /* Space between login and dark mode toggle */
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 0.85em; /* Slightly smaller font */
-  }
-  
-  .dark-mode-toggle {
-	background: none;
-	border: none;
-	cursor: pointer;
-  }
-  
-  /* Hover and focus effects for buttons */
-  .login-btn:hover {
-	background-color: #ddd;
-  }
-  
-  .dark-mode-toggle:hover {
-	opacity: 0.8;
-  }
-  
-  /* Dark mode styles for buttons */
-  .dark-mode .login-btn {
-	background-color: #333;
-	color: #fff;
-  }
-  
-  .dark-mode .login-btn:hover {
-	background-color: #444;
-  }
-  
-  .dark-mode .dark-mode-toggle {
-	color: #fff;
-  }
 
-  /* Dropdown Menu */
-
-	.dropotron {
-		background: #fff;
-		letter-spacing: 0.025em;
-		color: #696969;
-		text-decoration: none;
-		border-radius: 6px;
-		padding: 0.75em 0;
-		min-width: 15em;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0.25em 0.25em 0.1em rgba(0, 0, 0, 0.025);
-		margin-top: calc(-0.75em + 1px);
-		margin-left: -1px;
-		list-style: none;
-		padding-left: 0;
-	}
-
-		.dropotron li {
-			border-top: solid 1px #eee;
-			line-height: 3em;
-			padding-left: 0;
-		}
-
-			.dropotron li:first-child {
-				border-top: 0;
-			}
-
-			.dropotron li > a, .dropotron li > span {
-				-moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-				-webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-				-ms-transition: color .25s ease-in-out, background-color .25s ease-in-out;
-				transition: color .25s ease-in-out, background-color .25s ease-in-out;
-				text-decoration: none;
-				color: inherit;
-				display: block;
-				padding: 0 1.5em;
-			}
-
-				.dropotron li > a:hover, .dropotron li > span:hover {
-					background: #eee;
-				}
-
-			.dropotron li.active > a, .dropotron li.active > span {
-				background: #eee;
-			}
-
-		.dropotron.level-0 {
-			font-size: 0.8em;
-			margin-left: 1.5em;
-			margin-top: 0;
-		}
-
-			.dropotron.level-0:before {
-				content: '';
-				position: absolute;
-				top: -0.5em;
-				left: 1em;
-				border-bottom: solid 0.75em #ffffff;
-				border-left: solid 0.75em transparent;
-				border-right: solid 0.75em transparent;
-				z-index: 1;
-			}
-
-/* Banner */
+  /* Banner */
 
 	#banner {
 		position: relative;
@@ -2319,7 +2268,7 @@ input, select, textarea {
 		}
 
 	#copyright {
-		color: #aaa;
+		color: #fff;
 		padding: 4em 0 0 0;
 		text-align: center;
 	}
@@ -2397,6 +2346,8 @@ input, select, textarea {
 				margin: 0 !important;
 			}
 
+			
+
 		/* Actions */
 
 			ul.actions li {
@@ -2409,8 +2360,23 @@ input, select, textarea {
 					margin-top: 0;
 				}
 
-		/* Button */
 
+
+		/* Button */
+		.login-btn {
+			display: none;
+		}
+		.dark-mode .login-btn {
+			display: none;
+		}
+
+		.dark-mode-toggle {
+			background: none;
+			border: none;
+			cursor: pointer;
+			margin-right: 80px;
+			margin-top: -40px;
+		  }
 			input[type="button"],
 			input[type="submit"],
 			input[type="reset"],
@@ -2457,7 +2423,10 @@ input, select, textarea {
 			}
 
 		/* Logo */
-
+			#logo {
+				margin-top: -40px;
+				margin-left: -30px;
+			}
 			#logo span {
 				display: block;
 				margin: 0;
@@ -2474,7 +2443,7 @@ input, select, textarea {
 			#banner {
 				padding: 4.5em 3em;
 				text-align: center;
-				background-color: #faeee7;
+				background-color: #FAEEE7;
 			}
 
 				#banner ul {
@@ -2486,6 +2455,11 @@ input, select, textarea {
 					right: auto;
 					top: auto;
 				}
+
+		/* Banner Dark Mode Styles */
+			.dark-mode #banner {
+				background-color: #232946;
+			}
 
 		/* Content */
 
@@ -2522,156 +2496,6 @@ input, select, textarea {
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
 			}
-
-			#navToggle {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10001;
-			}
-
-				#navToggle .toggle {
-					text-decoration: none;
-					width: 70px;
-					height: 50px;
-					opacity: 0.35;
-				}
-
-					#navToggle .toggle:before {
-						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
-						display: inline-block;
-						font-style: normal;
-						font-variant: normal;
-						text-rendering: auto;
-						line-height: 1;
-						text-transform: none !important;
-						font-family: 'Font Awesome 5 Free';
-						font-weight: 900;
-					}
-
-					#navToggle .toggle:before {
-						display: inline-block;
-						text-decoration: none;
-						position: absolute;
-						left: 6px;
-						top: 6px;
-						background: rgba(0, 0, 0, 0.5);
-						width: 58px;
-						height: 38px;
-						border-radius: 6px;
-						content: '\f0c9';
-						color: #fff;
-						text-align: center;
-						line-height: 38px;
-						font-size: 20px;
-					}
-
-					#navToggle .toggle:active {
-						opacity: 0.75;
-					}
-
-			#navPanel {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translateX(-275px);
-				-webkit-transform: translateX(-275px);
-				-ms-transform: translateX(-275px);
-				transform: translateX(-275px);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 100%;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 275px;
-				z-index: 10002;
-				background: #fff;
-				box-shadow: inset -3px 0px 0px 0px #dfdfdf;
-				padding: 0 23px 0 20px;
-			}
-
-				#navPanel .link {
-					display: block;
-					text-decoration: none;
-					height: 54px;
-					line-height: 54px;
-					border-top: solid 1px #e8e8e8;
-					color: #696969;
-				}
-
-					#navPanel .link:first-child {
-						border-top: 0;
-					}
-
-				#navPanel .indent-1 {
-					display: inline-block;
-					width: 1em;
-				}
-
-				#navPanel .indent-2 {
-					display: inline-block;
-					width: 2em;
-				}
-
-				#navPanel .indent-3 {
-					display: inline-block;
-					width: 3em;
-				}
-
-				#navPanel .indent-4 {
-					display: inline-block;
-					width: 4em;
-				}
-
-				#navPanel .indent-5 {
-					display: inline-block;
-					width: 5em;
-				}
-
-				#navPanel .depth-0 {
-					color: #444;
-					font-weight: 800;
-				}
-
-			body.navPanel-visible #page-wrapper {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
-
-			body.navPanel-visible #navToggle {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
-
-			body.navPanel-visible #navPanel {
-				-moz-transform: translateX(0);
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
-			}
-
 	}
 
 /* Small */
@@ -2826,11 +2650,10 @@ input, select, textarea {
 
 		/* Logo */
 
-			#logo h1 {
-				font-size: 2.75em;
-				padding: 0.2em 0.275em;
+			#logo {
+				margin-top: -40px;
+				margin-left: 5px;
 			}
-
 			#logo span {
 				line-height: 3em;
 			}
