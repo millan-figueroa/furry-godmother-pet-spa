@@ -1,15 +1,28 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import '../assets/css/Header.css'; 
 import Logo from "../assets/css/images/furry_godmother_filled_light.png";
 import PropTypes from 'prop-types';  // Import PropTypes
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div id="header-wrapper">
       <header id="header" className="container">
         <div id="logo">
           <img src={Logo} alt="Logo" />
+        </div>
+
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
         </div>
 
         {/* Nav */}
@@ -30,9 +43,12 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
             <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/admin">Admin</Link>
             </li>
-            <li style={{ whiteSpace: 'nowrap' }}>
-              
-            </li>
+             {/* Conditionally render the login link inside the nav menu when dropdown is active */}
+            {isMenuOpen && (
+              <li style={{ whiteSpace: 'nowrap' }}>
+                <Link to="/login">Login</Link>
+              </li>
+            )}
           </ul>
         </nav>
          {/* Right-side buttons */}
