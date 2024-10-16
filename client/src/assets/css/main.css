@@ -1627,7 +1627,6 @@ input, select, textarea {
 		-webkit-transition: background-color .25s ease-in-out;
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
-		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
 		background: #ff8ba7;
@@ -1642,93 +1641,65 @@ input, select, textarea {
 		padding: 0.6em 1.5em;
 	}
 
-		input[type="button"].icon:before,
-		input[type="submit"].icon:before,
-		input[type="reset"].icon:before,
-		button.icon:before,
-		.button.icon:before {
-			position: relative;
-			margin-right: 0.5em;
-			top: 0.05em;
-		}
+	input[type="button"].icon:before,
+	input[type="submit"].icon:before,
+	input[type="reset"].icon:before,
+	button.icon:before,
+	.button.icon:before {
+		position: relative;
+		margin-right: 0.5em;
+		top: 0.05em;
+	}
+	input[type="button"]:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	button:hover,
+	.button:hover {
+		background: #594a4e;
+	}
+	input[type="button"]:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	button:active,
+	.button:active {
+		background: #fff;
+	}
 
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background: #594a4e;
-		}
-
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background: #A56E9E;
-		}
-
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background: #ff8ba7;
-			color: #fffffe;
-		}
-
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background: #e8e8e8;
-				background: #594a4e;
-			}
-
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background: #e4e4e4;
-				background: rgba(0, 0, 0, 0.15);
-			}
-
-		input[type="button"].large,
-		input[type="submit"].large,
-		input[type="reset"].large,
-		button.large,
-		.button.large {
+	input[type="button"].large,
+	input[type="submit"].large,
+	input[type="reset"].large,
+	button.large,
+	.button.large {
 			font-size: 2.25em;
 			padding: 0.8em 0.9em;
 		}
 
+
 /* Dark Mode Button Styles */
 
-.dark-mode input[type="button"],
-.dark-mode input[type="submit"],
-.dark-mode input[type="reset"],
-.dark-mode button,
-.dark-mode .button {
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-		-webkit-appearance: none;
-		position: relative;
-		display: inline-block;
-		background: #eebbc3;
-		color: #232946;
-		text-decoration: none;
-		border-radius: 6px;
-		font-weight: 800;
-		outline: 0;
-		border: 0;
-		cursor: pointer;
-		font-size: 1.35em;
-		padding: 0.6em 1.5em;
-	}
+	.dark-mode input[type="button"],
+	.dark-mode input[type="submit"],
+	.dark-mode input[type="reset"],
+	.dark-mode button,
+	.dark-mode .button {
+			-moz-transition: background-color .25s ease-in-out;
+			-webkit-transition: background-color .25s ease-in-out;
+			-ms-transition: background-color .25s ease-in-out;
+			transition: background-color .25s ease-in-out;
+			-webkit-appearance: none;
+			position: relative;
+			display: inline-block;
+			background: #eebbc3;
+			color: #232946;
+			text-decoration: none;
+			border-radius: 6px;
+			font-weight: 800;
+			outline: 0;
+			border: 0;
+			cursor: pointer;
+			font-size: 1.35em;
+			padding: 0.6em 1.5em;
+		}
 
 	.dark-mode input[type="button"].icon:before,
 	.dark-mode input[type="submit"].icon:before,
@@ -1740,119 +1711,33 @@ input, select, textarea {
 			top: 0.05em;
 		}
 
-		.dark-mode input[type="button"]:hover,
-		.dark-mode input[type="submit"]:hover,
-		.dark-mode input[type="reset"]:hover,
-		.dark-mode button:hover,
-		.dark-mode .button:hover {
-			background: #eebbc3;
-		}
-
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background: #A56E9E;
-		}
-
-		.dark-mode input[type="button"].alt,
-		.dark-mode input[type="submit"].alt,
-		.dark-mode input[type="reset"].alt,
-		.dark-mode button.alt,
-		.dark-mode .button.alt {
+	.dark-mode input[type="button"]:hover,
+	.dark-mode input[type="submit"]:hover,
+	.dark-mode input[type="reset"]:hover,
+	.dark-mode button:hover,
+	.dark-mode .button:hover {
 			background: #b8c1ec;
-			color: #232946;
 		}
 
-		.dark-mode input[type="button"].alt:hover,
-		.dark-mode input[type="submit"].alt:hover,
-		.dark-mode input[type="reset"].alt:hover,
-		.dark-mode button.alt:hover,
-		.dark-mode .button.alt:hover {
-				/* background: #e8e8e8; */
-				background: #eebbc3;
-			}
+	.dark-mode input[type="button"]:active,
+	.dark-mode input[type="submit"]:active,
+	.dark-mode input[type="reset"]:active,
+	.dark-mode button:active,
+	.dark-mode .button:active {
+			background: #fff;
+		}
 
-			.dark-mode input[type="button"].alt:active,
-			.dark-mode input[type="submit"].alt:active,
-			.dark-mode input[type="reset"].alt:active,
-			.dark-mode button.alt:active,
-			.dark-mode .button.alt:active {
-				background: #e4e4e4;
-				background: rgba(0, 0, 0, 0.15);
-			}
-
-			.dark-mode input[type="button"].large,
-			.dark-mode input[type="submit"].large,
-			.dark-mode input[type="reset"].large,
-			.dark-mode button.large,
-			.dark-mode .button.large {
+	.dark-mode input[type="button"].large,
+	.dark-mode input[type="submit"].large,
+	.dark-mode input[type="reset"].large,
+	.dark-mode button.large,
+	.dark-mode .button.large {
 			font-size: 2.25em;
 			padding: 0.8em 0.9em;
 		}
 
 
-/* Right-side buttons (login & dark mode) */
-
-.header-buttons {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end; /* Align buttons all the way to the right */
-	margin-right: -90px;
-	margin-left: 80px;
-  }
-  
-  .login-btn {
-	background-color: #594A4E;
-	border: 1px solid #ccc;
-	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
-	margin-right: 10px; /* Space between login and dark mode toggle */
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 1.1em; /* Slightly smaller font */
-	font-weight: 400;
-  }
-  
-  button.dark-mode-toggle {
-	background: none;
-	border: none;
-	cursor: pointer;
-  }
-  
-
-  /* Hover and focus effects for buttons */
-
-  .login-btn:hover {
-	background-color: #ddd;
-  }
-  
-  .dark-mode-toggle:hover {
-	opacity: 0.8;
-  }
-  
-  /* Dark mode styles for buttons */
-  .dark-mode .login-btn {
-	background-color: #b8c1ec;
-	border: 1px solid #fff;
-	color: #fff;
-	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
-	margin-right: 10px; /* Space between login and dark mode toggle */
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 1.1em; /* Slightly smaller font */
-	font-weight: 400;
-  }
-  
-  .dark-mode .login-btn:hover {
-	background-color: #444;
-  }
-  
-  .dark-mode .dark-mode-toggle {
-	color: #fff;
-  }
-
-/* List */
+/* List? */
 
 	ul {
 		list-style: disc;
@@ -1881,7 +1766,7 @@ input, select, textarea {
 			padding-left: 0.25em;
 		}
 
-/* Actions */
+/* Actions? */
 
 	ul.actions {
 		list-style: none;
@@ -1919,20 +1804,46 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
-/* Box */
+/* Feature & Banner Box */
 
 	.box {
 		background: #faeee7;
 		border-radius: 6px;
-		/* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.05); */
 		padding: 2em;
 		border:3px #EDE2DB solid;
 	}
-/* Box Dark Mode Styles */
+	
+	.box.feature {
+		padding: 0;
+	}
+
+		.box.feature .inner {
+			padding: 4em 2em 3em 2em;
+		}
+
+		.box.feature h2 {
+			font-size: 1.35em;
+		}
+
+		.box.feature p {
+			margin: 0;
+		}
+
+		.box.feature .image {
+			position: relative;
+			margin: 0;
+		}
+
+			.box.feature .image img {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+/* Feature Box Dark Mode Styles */
+
 	.dark-mode .box {
 		background: #232946;
 		border-radius: 6px;
-		/* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.05); */
 		padding: 2em;
 		border:3px #EDE2DB solid;
 		color:#EDE2DB;
@@ -1940,33 +1851,9 @@ input, select, textarea {
 	.dark-mode .box h2 {
 		color: #EDE2DB;
 	}
-		.box.feature {
-			padding: 0;
-		}
+		
 
-			.box.feature .inner {
-				padding: 4em 2em 3em 2em;
-			}
-
-			.box.feature h2 {
-				font-size: 1.35em;
-			}
-
-			.box.feature p {
-				margin: 0;
-			}
-
-			.box.feature .image {
-				position: relative;
-				margin: 0;
-			}
-
-				.box.feature .image img {
-					border-bottom-left-radius: 0;
-					border-bottom-right-radius: 0;
-				}
-
-/* Icons */
+/* Banner Icons */
 
 	.icon {
 		text-decoration: none;
@@ -2003,7 +1890,7 @@ input, select, textarea {
 			display: none;
 		}
 
-/* Widgets */
+/* SM Widgets */
 
 	.widget.thumbnails .grid {
 		margin: 0 0 3em 0;
@@ -2068,16 +1955,9 @@ input, select, textarea {
 		padding: 5em 0 5em 0;
 	}
 
-	#header-wrapper {
-		padding: 4em 0 0 0;
-		/* margin-bottom: -2em; */
-		background: #594a4e;
-		border-bottom: 3px solid white ;
-	}
-
-	/* #banner-wrapper.box-container {
+	#banner-wrapper.box-container {
 		background-color: #f48a72;
-	} */
+	}
 
 	#features-wrapper {
 		padding: 3em 0 3em 0;
@@ -2096,121 +1976,12 @@ input, select, textarea {
 		color: #fffffe;
 	}
 
-	.dark-mode #header-wrapper,
+	
 	.dark-mode #footer-wrapper {
 		background-color: #b8c1ec;
 		color: #121629;
 	}
-	
-
-/* Header */
-#header {
-	display: flex; /* Align elements horizontally */
-	align-items: center; /* Vertically align logo and nav */
-	justify-content: space-between;
-	padding: 10px 0; /* Adjust padding to control overall height */
-	margin-top: -60px;
-	position: relative; /* Allow fine-tuning of the logo and nav positioning */
-	margin-left: 30px;
-  }
-  
-  /* Logo */
-  #logo {
-	flex-shrink: 0; /* Prevent logo from shrinking */
-	margin: 0; /* Remove margins */
-	position: relative;
-	top: 5px; /* Adjust to move the logo upwards */
-	padding: 5px 0 5px 0;
-	max-width: 150px; /* Limit the width of the logo div */
-	
-  }
-  
-  #logo img {
-	width: auto;
-	max-width: 100%; /* Control logo size */
-	height: auto;
-	display: block; /* Prevent extra vertical spacing */
-  }
-  
-  /* Nav */
-  nav {
-	margin-left: auto; /* Push navigation to the right */
-	display: flex; /* Keep nav items aligned horizontally */
-	align-items: center; /* Ensure vertical alignment */
-	padding-top: 25px;
-  }
-  
-		#nav ul {
-			list-style: none;
-			padding-left: 0;
-		}
-
-			#nav ul li {
-				float: left;
-				line-height: 4.5em;
-				padding-left: 1.5em;
-			}
-
-				#nav ul li a, #nav ul li span {
-					-moz-transition: background-color .25s ease-in-out;
-					-webkit-transition: background-color .25s ease-in-out;
-					-ms-transition: background-color .25s ease-in-out;
-					transition: background-color .25s ease-in-out;
-					font-weight: 800;
-					letter-spacing: 0.025em;
-					color: #fff;
-					text-decoration: none;
-					border-radius: 6px;
-					padding: 0.5em 1em 0.5em 1em;
-				}
-
-				#nav ul li > ul {
-					display: none;
-				}
-
-				#nav ul li:hover a, #nav ul li:hover span {
-					background: #A59398;
-				}
-
-				#nav ul li.active a, #nav ul li.active span {
-					background: #fff;
-				}
-
-				#nav ul li.current a {
-					background: #A59398;
-					color: #fff;
-				}
-
-	/* Nav Dark Mode Styles */
-	.dark-mode #nav ul li a, #nav ul li span {
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-		font-weight: 800;
-		letter-spacing: 0.025em;
-		color: #232946;
-		text-decoration: none;
-		border-radius: 6px;
-		padding: 0.5em 1em 0.5em 1em;
-	}
-
-	.dark-mode #nav ul li > ul {
-		display: none;
-	}
-
-	.dark-mode #nav ul li:hover a, #nav ul li:hover span {
-		background: #F4D2D7;
-	}
-
-	.dark-mode #nav ul li.active a, #nav ul li.active span {
-		background: #fff;
-	}
-
-	.dark-mode #nav ul li.current a {
-		background: #F4D2D7;
-		color: #232946;
-	}
+		
 
 
   /* Banner */

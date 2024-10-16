@@ -1,0 +1,182 @@
+/* Desktop */
+
+#header-wrapper {
+    padding: 4em 0 0 0;
+    /* margin-bottom: -2em; */
+    background: #594a4e;
+    border-bottom: 3px solid white ;
+}
+
+#header {
+	display: flex; /* Align elements horizontally */
+	align-items: center; /* Vertically align logo and nav */
+	justify-content: space-between;
+	padding: 10px 0; /* Adjust padding to control overall height */
+	margin-top: -60px;
+	position: relative; /* Allow fine-tuning of the logo and nav positioning */
+	margin-left: 30px;
+  }
+  
+  /* Logo */
+  #logo {
+	flex-shrink: 0; /* Prevent logo from shrinking */
+	margin: 0; /* Remove margins */
+	position: relative;
+	top: 5px; /* Adjust to move the logo upwards */
+	padding: 5px 0 5px 0;
+	max-width: 150px; /* Limit the width of the logo div */
+	
+  }
+  
+  #logo img {
+	width: auto;
+	max-width: 100%; /* Control logo size */
+	height: auto;
+	display: block; /* Prevent extra vertical spacing */
+  }
+  
+  /* Nav */
+  nav {
+	margin-left: auto; /* Push navigation to the right */
+	display: flex; /* Keep nav items aligned horizontally */
+	align-items: center; /* Ensure vertical alignment */
+	padding-top: 25px;
+  }
+  
+		#nav ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			#nav ul li {
+				float: left;
+				line-height: 4.5em;
+				padding-left: 1.5em;
+			}
+
+				#nav ul li a, #nav ul li span {
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					font-weight: 800;
+					letter-spacing: 0.025em;
+					color: #fff;
+					text-decoration: none;
+					border-radius: 6px;
+					padding: 0.5em 1em 0.5em 1em;
+				}
+
+				#nav ul li > ul {
+					display: none;
+				}
+
+				#nav ul li:hover a, #nav ul li:hover span {
+					background: #A59398;
+				}
+
+				#nav ul li.active a, #nav ul li.active span {
+					background: #fff;
+				}
+
+				#nav ul li.current a {
+					background: #A59398;
+					color: #fff;
+				}
+
+/* Dark Mode Styles */
+
+.dark-mode #header-wrapper {
+		background-color: #b8c1ec;
+		color: #121629;
+	}
+
+.dark-mode #nav ul li a, #nav ul li span {
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+    color: #232946;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.dark-mode #nav ul li > ul {
+    display: none;
+}
+
+.dark-mode #nav ul li:hover a, #nav ul li:hover span {
+    background: #9FABE5;
+}
+
+.dark-mode #nav ul li.active a, #nav ul li.active span {
+    background: #fff;
+}
+
+.dark-mode #nav ul li.current a {
+    background: #9FABE5;
+    color: #232946;
+}
+
+/* Right-side buttons (login & dark mode) */
+
+.header-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end; /* Align buttons all the way to the right */
+	margin-right: -90px;
+	margin-left: 80px;
+  }
+  
+  .login-btn {
+	background-color: #594A4E;
+	border: 2px solid #ccc;
+	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
+	margin-right: 10px; /* Space between login and dark mode toggle */
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1.1em; /* Slightly smaller font */
+	font-weight: 600;
+  }
+  
+  button.dark-mode-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+  
+
+  /* Hover and focus effects for buttons */
+
+  .login-btn:hover {
+	background-color: #A59398;
+  }
+  
+  .dark-mode-toggle:hover {
+	opacity: 0.8;
+  }
+  
+  /* Dark mode styles for buttons */
+  .dark-mode .login-btn {
+	background-color: #b8c1ec;
+	border: 2px solid #232946;
+	color: #232946;
+	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
+	margin-right: 10px; /* Space between login and dark mode toggle */
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 1.1em; /* Slightly smaller font */
+	font-weight: 600;
+  }
+  
+  .dark-mode .login-btn:hover {
+	background-color: #9FABE5;
+  }
+  
+  .dark-mode .dark-mode-toggle {
+	background-color: #b8c1ec;
+	color: #232946;
+  }

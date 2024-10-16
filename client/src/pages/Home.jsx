@@ -22,9 +22,9 @@ const BannerAndFeatures = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="button alt large icon solid fa-question-circle">
-                    Book Now
-                  </a>
+                  <a href="#" className="button large icon solid fa-arrow-circle-right">
+                      Book Now
+                    </a>
                 </li>
               </ul>
             </div>
