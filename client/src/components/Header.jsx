@@ -19,12 +19,6 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         <div id="logo">
           <img src={Logo} alt="Logo" />
         </div>
-
-        {/* Hamburger Icon
-        <div className="hamburger" onClick={toggleMenu}>
-          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
-        </div> */}
-
         {/* Nav */}
         <nav id="nav">
           <ul>

@@ -1,0 +1,153 @@
+/* Feature & Banner Box */
+#main-wrapper {
+    background: #faeee7;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+    padding: 5em 0 5em 0;
+}
+
+#banner-wrapper.box-container {
+    background-color: #f48a72;
+}
+
+#features-wrapper {
+    padding: 3em 0 3em 0;
+}
+.box {
+    background: #faeee7;
+    border-radius: 6px;
+    padding: 2em;
+    border:3px #EDE2DB solid;
+}
+
+/* Dark mode styles */
+.dark-mode #main-wrapper {
+    background-color: #232946;
+    color: #fffffe;
+}
+
+
+.dark-mode #footer-wrapper {
+    background-color: #b8c1ec;
+    color: #121629;
+}
+
+.box.feature {
+    padding: 0;
+}
+
+    .box.feature .inner {
+        padding: 4em 2em 3em 2em;
+    }
+
+    .box.feature h2 {
+        font-size: 1.35em;
+    }
+
+    .box.feature p {
+        margin: 0;
+    }
+
+    .box.feature .image {
+        position: relative;
+        margin: 0;
+    }
+
+        .box.feature .image img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+/* Feature Box Dark Mode Styles */
+
+.dark-mode .box {
+    background: #232946;
+    border-radius: 6px;
+    padding: 2em;
+    border:3px #EDE2DB solid;
+    color:#EDE2DB;
+}
+.dark-mode .box h2 {
+    color: #EDE2DB;
+}
+    
+
+/* Banner Icons */
+
+.icon {
+    text-decoration: none;
+    position: relative;
+    text-decoration: none;
+}
+
+    .icon:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+    }
+
+    .icon:before {
+        line-height: inherit;
+    }
+
+    .icon.solid:before {
+        font-weight: 900;
+    }
+
+    .icon.brands:before {
+        font-family: 'Font Awesome 5 Brands';
+    }
+
+    .icon > .label {
+        display: none;
+    }
+
+    /* Banner */
+
+	#banner {
+		position: relative;
+		padding: 4.5em;
+	}
+
+		#banner h2 {
+			font-size: 3.5em;
+			margin: 0.1em 0 0.35em 0;
+		}
+
+		#banner p {
+			font-size: 2.75em;
+			line-height: 1.35em;
+			margin: 0;
+		}
+
+		#banner .button {
+			width: 100%;
+			margin-bottom: 0.5em;
+		}
+
+			#banner .button.icon:before {
+				position: absolute;
+				right: 0.15em;
+				top: 50%;
+				margin-top: -0.5em;
+			}
+
+			#banner .button.alt {
+				margin-bottom: 0;
+			}
+
+		#banner ul {
+			list-style: none;
+			padding-left: 0;
+			margin: 0 0 0 2em;
+		}
+
+			#banner ul li {
+				padding-left: 0;
+			}
