@@ -145,8 +145,8 @@
 	border: none;
 	cursor: pointer;
   }
-  
-
+							
+		
   /* Hover and focus effects for buttons */
 
   .login-btn:hover {
@@ -194,25 +194,40 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		margin-right: 80px;
-		margin-top: -40px;
+		margin-right: 10;
+		margin-top: 0;
 	  }
 
 	/* Tablet Wrappers */
-		#header-wrapper {
-			padding: 3em 0 1em 0;
-			text-align: center;
-		}
+	#header-wrapper {
+		padding: 4em 0 0 0;
+		/* margin-bottom: -2em; */
+		background: #594a4e;
+		border-bottom: 3px solid white ;
+	}
+
+	/* #header-wrapper {
+		padding: 3em 0 1em 0;
+		text-align: center;
+	} */
 
 	/* Tablet Header */
-		#header {
+	#header {
+		display: flex; 
+			align-items: center; 
+		justify-content: space-between;
+		padding: 15px 0; 
+		margin-top: -60px;
+		position: relative; 
+	  }
+		/* #header {
 			margin: 0 auto;
-		}
+		} */
 
 	/* Tablet Logo */
 		#logo {
-			margin-top: -40px;
-			margin-left: -30px;
+			margin-top: 0;
+			margin-left: -20px;
 		}
 		#logo span {
 			display: block;
@@ -229,10 +244,29 @@
 
 	/* Tablet Dark Button */
 	
-	.login-btn {
+	.dark-mode .login-btn {
 		display: none;
 	}
-	.dark-mode .login-btn {
+}
+
+/* Mobile */
+@media screen and (max-width: 599px) {
+
+	#header {
+		display: flex; 
+		align-items: center; 
+		justify-content: space-between;
+		padding: 10px 0; 
+		margin-top: -30px;
+		position: relative; 
+	  }
+
+	#nav {
+		display: none;
+	}
+
+	/* Mobile Button */
+	.login-btn {
 		display: none;
 	}
 
@@ -240,21 +274,16 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		margin-right: 120px;
-		margin-top: -40px;
+		margin-right: 25px;
+		margin-top: 0;
 	  }
 
-}
-
-/* Mobile */
-@media screen and (max-width: 599px) {
-
-	#nav {
+	.dark-mode .login-btn {
 		display: none;
 	}
 	
 
-	/* Wrappers */
+	/* Mobile Wrappers */
 
 		#header-wrapper {
 			padding: 3em 0 1.5em 0;
@@ -262,7 +291,7 @@
 
 		
 
-	/* Logo */
+	/* Mobile Logo */
 
 		#logo {
 			position: relative;
@@ -270,15 +299,4 @@
 			left: 20px;
 			max-width: 100px;
 		}
-
-		#logo span {
-			line-height: 3em;
-		}
-
-
-		.dark-mode .login-btn {
-			display: none;
-		}
-	
-
 }
