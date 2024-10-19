@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 //Import useState to capture customer selections and control form data.
 import React, { useState } from 'react';
-
 //Import react-calendar to create a ready-made interactive calendar.
 import Calendar from 'react-calendar';
-
 //Import useNavigate to redirect the user back to the Home page after booking.
 import { useNavigate } from 'react-router-dom';
+import '../assets/css/Booking.css'; 
 
 //Define variables for dropdown menus. These could be saved in MongoDB instead to make them updateable in a UI element.
 const services = [
