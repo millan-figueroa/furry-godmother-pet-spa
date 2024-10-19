@@ -154,6 +154,7 @@
 			}
 
 /* RESPONSIVE STYLES */
+
 /* Mobile Large */
 @media screen and (max-width: 599px) {
     #banner h2 {
@@ -167,6 +168,8 @@
         line-height: 1.35em;
         margin: 0;
     }
+
+
 	
 }
 
