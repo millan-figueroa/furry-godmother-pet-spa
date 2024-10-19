@@ -222,7 +222,7 @@ input, select, textarea {
 
 		}
 
-/* Mobile */
+/* Mobile Large */
 		@media screen and (max-width: 599px) {
 
 			.container {
@@ -231,6 +231,14 @@ input, select, textarea {
 
 		}
 
+/* Mobile Small */
+		@media screen and (max-width: 391px) {
+
+			.container {
+				width: 100%;
+			}
+		}
+		
 /* Row */
 
 	.row {

@@ -249,7 +249,9 @@
 	}
 }
 
-/* Mobile */
+
+/* Mobile Large */
+
 @media screen and (max-width: 599px) {
 
 	#header {
@@ -257,7 +259,7 @@
 		align-items: center; 
 		justify-content: space-between;
 		padding: 10px 0; 
-		margin-top: -30px;
+		margin-top: -40px;
 		position: relative; 
 	  }
 
@@ -299,4 +301,11 @@
 			left: 20px;
 			max-width: 100px;
 		}
+}
+
+/* Mobile Small */
+@media screen and (max-width: 390px) {
+    #header-wrapper {
+        padding: 2em 0 0.5em 0;
+    }
 }

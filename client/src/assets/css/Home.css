@@ -152,3 +152,45 @@
 			#banner ul li {
 				padding-left: 0;
 			}
+
+/* RESPONSIVE STYLES */
+/* Mobile Large */
+@media screen and (max-width: 599px) {
+    #banner h2 {
+        font-size: 3em;
+        margin: 0.1em 0 0.35em 0;
+        text-align: center;
+    }
+
+    #banner p {
+        font-size: 2.50em;
+        line-height: 1.35em;
+        margin: 0;
+    }
+	
+}
+
+
+/* Mobile Small */
+@media screen and (max-width: 390px) {
+
+    #main-wrapper {
+        background: #faeee7;
+        padding: 2em 0 0em 0;
+    }
+
+    #banner h2 {
+        font-size: 2.5em;
+        margin: 0.1em 0 0.35em 0;
+        text-align: center;
+    }
+
+    #banner p {
+        font-size: 1.75em;
+        line-height: 1.35em;
+        margin: 0;
+    }
+    .row > * {
+        padding: 0;
+    }
+}
