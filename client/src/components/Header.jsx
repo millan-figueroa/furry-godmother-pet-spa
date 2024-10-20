@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faCalendarAlt, faClipboardUser, faSignInAlt, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/Header.css'; 
 import Logo from "../assets/css/images/furry_godmother_filled_light.png";
+import LogoDark from "../assets/css/images/furry_godmother_logo_filled_dark.png";
 import PropTypes from 'prop-types';  // Import PropTypes
 
 const Header = ({ isDarkMode, toggleDarkMode }) => {
@@ -14,10 +15,11 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
   };
 
   return (
-    <div id="header-wrapper">
+    <div id="header-wrapper" className={isDarkMode ? 'dark-mode' : ''}>
       <header id="header" className="container">
         <div id="logo">
-          <img src={Logo} alt="Logo" />
+          {/* Conditionally rendering the light or dark logo based on the dark mode state */}
+          <img src={isDarkMode ? LogoDark : Logo} alt="Logo" />
         </div>
 
         {/* Nav */}
@@ -80,7 +82,8 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
 
 
 Header.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,     // isDarkMode should be a boolean and is required
-  toggleDarkMode: PropTypes.func.isRequired  // toggleDarkMode should be a function and is required
+  isDarkMode: PropTypes.bool.isRequired,     
+  toggleDarkMode: PropTypes.func.isRequired, 
 };
+
 export default Header;

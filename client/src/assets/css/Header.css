@@ -91,7 +91,7 @@
 		color: #121629;
 	}
 
-.dark-mode #nav ul li a, #nav ul li span, #mobile-nav ul li a, #mobile-nav ul li span {
+.dark-mode #nav ul li a, .dark-mode #nav ul li span, .dark-mode #mobile-nav ul li a, .dark-mode #mobile-nav ul li span {
     -moz-transition: background-color .25s ease-in-out;
     -webkit-transition: background-color .25s ease-in-out;
     -ms-transition: background-color .25s ease-in-out;
@@ -104,19 +104,19 @@
     padding: 0.5em 1em 0.5em 1em;
 }
 
-.dark-mode #nav ul li > ul, #mobile-nav ul li > ul {
+.dark-mode #nav ul li > ul, .dark-mode #mobile-nav ul li > ul {
     display: none;
 }
 
-.dark-mode #nav ul li:hover a, #nav ul li:hover span, #mobile-nav ul li:hover a, #mobile-nav ul li:hover span {
+.dark-mode #nav ul li:hover a, .dark-mode #nav ul li:hover span, .dark-mode #mobile-nav ul li:hover a, .dark-mode #mobile-nav ul li:hover span {
     background: #9FABE5;
 }
 
-.dark-mode #nav ul li.active a, #nav ul li.active span, #mobile-nav ul li.active a, #mobile-nav ul li.active span {
+.dark-mode #nav ul li.active a, .dark-mode #nav ul li.active span, .dark-mode #mobile-nav ul li.active a, .dark-mode #mobile-nav ul li.active span {
     background: #fff;
 }
 
-.dark-mode #nav ul li.current a, #mobile-nav ul li.current a {
+.dark-mode #nav ul li.current a, .dark-mode #mobile-nav ul li.current a {
     background: #9FABE5;
     color: #232946;
 }
