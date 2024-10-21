@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faCalendarAlt, faClipboardUser, faSignInAlt, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faBars, faHome, faCalendarAlt, faClipboardUser, faSignInAlt, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/Header.css'; 
 import Logo from "../assets/css/images/furry_godmother_filled_light.png";
 import LogoDark from "../assets/css/images/furry_godmother_logo_filled_dark.png";
@@ -20,6 +20,11 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         <div id="logo">
           {/* Conditionally rendering the light or dark logo based on the dark mode state */}
           <img src={isDarkMode ? LogoDark : Logo} alt="Logo" />
+        </div>
+
+        {/* Hamburger Icon */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" />
         </div>
 
         {/* Nav */}
@@ -68,6 +73,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
             </li>
           </ul>
         </nav>
+
          {/* Right-side buttons */}
          <div className="header-buttons">
           <button className="login-btn">Login</button>

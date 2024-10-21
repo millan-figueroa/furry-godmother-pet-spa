@@ -121,13 +121,12 @@
     color: #232946;
 }
 
-/* Right-side buttons (login & dark mode) */
+/* Right-side buttons (login & dark mode toggle) */
 
 .header-buttons {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end; /* Align buttons all the way to the right */
-	/* margin-right: -90px; */
+	justify-content: flex-end; 
 	margin-left: 80px;
   }
   
@@ -149,7 +148,7 @@
   }
 							
 		
-  /* Hover and focus effects for buttons */
+  	/* Hover and focus effects for buttons */
 
   .login-btn:hover {
 	background-color: #A59398;
@@ -182,18 +181,76 @@
   }
 
 
+/* ****** Laptop & Desktop Specific Display Rules */
+
 @media screen and (min-width: 1024px) and (max-width: 1680px) {
-	/* Mobile Nav */
+
+	/* Laptop & Desktop Dropdown Toggle Menu */
+	.hamburger {
+		display: none;
+		cursor: pointer;
+		font-size: 24px;
+	  }
+
+	/* Laptop & Desktop Mobile Nav */
 	#mobile-nav {
 		display: none;
 	}
 }
-  /* Tablet */
+
+
+
+/* ****** Tablet Styles */
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
 
-	
-	/* Tablet Button */
+	/* Tablet Wrappers */
+	#header-wrapper {
+		padding: 4em 0 0 0;
+		/* margin-bottom: -2em; */
+		background: #594a4e;
+		border-bottom: 3px solid white ;
+	}
+
+
+	/* Tablet Header */
+	#header {
+		display: flex; 
+		align-items: center; 
+		justify-content: space-between;
+		padding: 15px 0; 
+		margin-top: -60px;
+		position: relative; 
+	  }
+		
+
+	/* Tablet Dropdown Toggle Menu */
+	.hamburger {
+		display: none;
+		cursor: pointer;
+		font-size: 24px;
+	  } 
+
+
+	/* Tablet Logo */
+	#logo {
+		margin-top: 0;
+		margin-left: -20px;
+		max-width: 120px;
+	}
+
+	#logo span {
+		display: block;
+		margin: 0;
+	}
+
+	/* Tablet Nav */
+	#nav {
+		display: none;
+	}
+
+
+	/* Tablet Right-hand Buttons */
 	.login-btn {
 		display: none;
 	}
@@ -206,76 +263,61 @@
 		margin-top: 0;
 	  }
 
-	/* Tablet Wrappers */
-	#header-wrapper {
-		padding: 4em 0 0 0;
-		/* margin-bottom: -2em; */
-		background: #594a4e;
-		border-bottom: 3px solid white ;
-	}
 
-	/* #header-wrapper {
-		padding: 3em 0 1em 0;
-		text-align: center;
-	} */
-
-	/* Tablet Header */
-	#header {
-		display: flex; 
-			align-items: center; 
-		justify-content: space-between;
-		padding: 15px 0; 
-		margin-top: -60px;
-		position: relative; 
-	  }
-		/* #header {
-			margin: 0 auto;
-		} */
-
-	/* Tablet Logo */
-		#logo {
-			margin-top: 0;
-			margin-left: -20px;
-		}
-		#logo span {
-			display: block;
-			margin: 0;
-		}
-
-	/* Tablet Nav */
-
-		#nav {
-			display: none;
-		}
-
-	/* Tablet Dark */
-
-	/* Tablet Dark Button */
-	
+	/* Tablet Dark Mode Styles */
 	.dark-mode .login-btn {
 		display: none;
 	}
 }
 
 
-/* Mobile Large */
+
+/* ****** Large Phone Styles */
 
 @media screen and (max-width: 599px) {
+	  
+	/* L Phone Wrappers */
 
+	  #header-wrapper {
+			padding: 3em 0 1.5em 0;
+		}
+
+	/* L Phone Header */
 	#header {
 		display: flex; 
 		align-items: center; 
 		justify-content: space-between;
 		padding: 10px 0; 
-		margin-top: -40px;
+		margin-top: -50px;
 		position: relative; 
 	  }
 
+	/* L Phone Dropdown Toggle Menu */
+	.hamburger {
+		display: none;
+		cursor: pointer;
+		font-size: 24px;
+	  } 
+
+	/* L Phone Logo */
+		#logo {
+			position: relative;
+			top: 2px;
+			left: 20px;
+			max-width: 100px;
+		}
+
+	/* L Phone Nav */
 	#nav {
 		display: none;
 	}
 
-	/* Mobile Button */
+	/* L Phone Mobile Nav */
+	#mobile-nav {
+		display: none;
+	}
+
+	/* L Phone Right-hand Buttons */
 	.login-btn {
 		display: none;
 	}
@@ -288,31 +330,17 @@
 		margin-top: 0;
 	  }
 
+
+	/* L Phone Dark Mode Styles */
 	.dark-mode .login-btn {
 		display: none;
 	}
-	
-
-	/* Mobile Wrappers */
-
-		#header-wrapper {
-			padding: 3em 0 1.5em 0;
-		}
-
-		
-
-	/* Mobile Logo */
-
-		#logo {
-			position: relative;
-			top: 2px;
-			left: 20px;
-			max-width: 100px;
-		}
 }
 
-/* Mobile Small */
+/* ****** Small Phone */
 @media screen and (max-width: 390px) {
+
+	/* L Phone Wrapper */
     #header-wrapper {
         padding: 2em 0 0.5em 0;
     }
