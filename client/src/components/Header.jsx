@@ -37,14 +37,14 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
               <Link to="/services">Services</Link>
             </li>               */}
             <li style={{ whiteSpace: 'nowrap' }}>
-              <Link to="/booking">Booking</Link>
+              <Link to="/booking">Booking/ Services</Link>
             </li>
             <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/staff">Staff</Link>
             </li>
-            <li style={{ whiteSpace: 'nowrap' }}>
+            {/* <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/admin">Admin</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -76,7 +76,9 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
 
          {/* Right-side buttons */}
          <div className="header-buttons">
-          <button className="login-btn">Login</button>
+         <Link to="/admin" className="login-btn">
+            Login
+          </Link>
           <button onClick={toggleDarkMode} className="dark-mode-toggle">
             <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} size="lg" />
           </button>

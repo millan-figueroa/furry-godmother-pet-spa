@@ -128,9 +128,10 @@
 	align-items: center;
 	justify-content: flex-end; 
 	margin-left: 80px;
-  }
+}
   
-  button.login-btn {
+a.login-btn {
+	color: #ccc;
 	background-color: #594A4E;
 	border: 2px solid #ccc;
 	padding: 0.3em 0.6em; /* Smaller padding for a compact button */
@@ -139,27 +140,27 @@
 	border-radius: 5px;
 	font-size: 1.1em; /* Slightly smaller font */
 	font-weight: 600;
-  }
+}
   
-  button.dark-mode-toggle {
+button.dark-mode-toggle {
 	background-color: #594A4E;
 	border: none;
 	cursor: pointer;
-  }
+}
 							
 		
   	/* Hover and focus effects for buttons */
 
-  .login-btn:hover {
+.login-btn:hover {
 	background-color: #A59398;
-  }
+}
   
-  .dark-mode-toggle:hover {
+.dark-mode-toggle:hover {
 	opacity: 0.8;
-  }
+}
   
   /* Dark mode styles for buttons */
-  .dark-mode .login-btn {
+.dark-mode .login-btn {
 	background-color: #b8c1ec;
 	border: 2px solid #232946;
 	color: #232946;
@@ -169,16 +170,16 @@
 	border-radius: 5px;
 	font-size: 1.1em; /* Slightly smaller font */
 	font-weight: 600;
-  }
+}
   
-  .dark-mode .login-btn:hover {
+.dark-mode .login-btn:hover {
 	background-color: #9FABE5;
-  }
+}
   
-  .dark-mode .dark-mode-toggle {
+.dark-mode .dark-mode-toggle {
 	background-color: #b8c1ec;
 	color: #232946;
-  }
+}
 
 
 /* ****** Laptop & Desktop Specific Display Rules */
@@ -278,15 +279,15 @@
 	  
 	/* L Phone Wrappers */
 
-	  #header-wrapper {
-			padding: 3em 0 1.5em 0;
-		}
+	#header-wrapper {
+		padding: 3em 0 1.5em 0;
+	}
 
 	/* L Phone Header */
 	#header {
 		display: flex; 
-		align-items: center; 
 		justify-content: space-between;
+		align-items: center; 
 		padding: 10px 0; 
 		margin-top: -50px;
 		position: relative; 
@@ -294,24 +295,28 @@
 
 	/* L Phone Dropdown Toggle Menu */
 	.hamburger {
-		display: none;
+		color: #ccc;
 		cursor: pointer;
-		font-size: 24px;
+		font-size: 20px;
+		order: -1;
+		margin-left: 18px;
 	  } 
 
 	/* L Phone Logo */
-		#logo {
-			position: relative;
-			top: 2px;
-			left: 20px;
-			max-width: 100px;
-		}
+	#logo {
+		position: relative;
+		top: 12px;
+		left: 38px;
+		max-width: 100px;
+		order: 0;
+	}
 
 	/* L Phone Nav */
 	#nav {
 		display: none;
 	}
 
+	
 	/* L Phone Mobile Nav */
 	#mobile-nav {
 		display: none;
@@ -328,6 +333,7 @@
 		cursor: pointer;
 		margin-right: 25px;
 		margin-top: 0;
+		order: 3;
 	  }
 
 
@@ -342,6 +348,17 @@
 
 	/* L Phone Wrapper */
     #header-wrapper {
-        padding: 2em 0 0.5em 0;
+        padding: 3em 0 0.5em 0;
     }
+
+	#header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px 12px 0px;
+        margin-top: -50px;
+        position: relative;
+    }
+
+	
 }
