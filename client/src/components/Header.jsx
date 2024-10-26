@@ -28,23 +28,20 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         </div>
 
         {/* Nav */}
-        <nav id="nav">
+        <nav id="nav" className={isMenuOpen ? 'open' : ''}>
           <ul>
             <li className="current" style={{ whiteSpace: 'nowrap' }}>
               <Link to="/">Welcome</Link>
             </li>
-            {/* <li style={{ whiteSpace: 'nowrap' }}>
-              <Link to="/services">Services</Link>
-            </li>               */}
             <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/booking">Booking/ Services</Link>
             </li>
             <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/staff">Staff</Link>
             </li>
-            {/* <li style={{ whiteSpace: 'nowrap' }}>
+            <li style={{ whiteSpace: 'nowrap' }}>
               <Link to="/admin">Admin</Link>
-            </li> */}
+            </li>
           </ul>
         </nav>
 

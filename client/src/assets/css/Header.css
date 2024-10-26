@@ -250,6 +250,10 @@ button.dark-mode-toggle {
 		display: none;
 	}
 
+	#mobile-nav {
+		margin-left: 30px;
+	}
+
 
 	/* Tablet Right-hand Buttons */
 	.login-btn {
@@ -278,7 +282,6 @@ button.dark-mode-toggle {
 @media screen and (max-width: 599px) {
 	  
 	/* L Phone Wrappers */
-
 	#header-wrapper {
 		padding: 3em 0 1.5em 0;
 	}
@@ -291,7 +294,7 @@ button.dark-mode-toggle {
 		padding: 10px 0; 
 		margin-top: -50px;
 		position: relative; 
-	  }
+	}
 
 	/* L Phone Dropdown Toggle Menu */
 	.hamburger {
@@ -300,29 +303,64 @@ button.dark-mode-toggle {
 		font-size: 20px;
 		order: -1;
 		margin-left: 18px;
-	  } 
+	} 
 
-	/* L Phone Logo */
+	/* Centered Logo */
 	#logo {
 		position: relative;
-		top: 12px;
-		left: 38px;
+		top: 5px;
+		left: 89px;
 		max-width: 100px;
 		order: 0;
+		transform: translateX(-50%);
 	}
 
-	/* L Phone Nav */
-	#nav {
-		display: none;
-	}
-
-	
-	/* L Phone Mobile Nav */
 	#mobile-nav {
 		display: none;
 	}
 
-	/* L Phone Right-hand Buttons */
+	/* Full-Width Dropdown Menu */
+	#nav {
+		display: none; /* Hide by default */
+		position: absolute;
+		top: 100%; /* Position right below the header */
+		left: 0;
+		width: 100%;
+		background-color: #333;
+		z-index: 999;
+	}
+
+	/* Show Menu when Open */
+	#nav.open {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* Full-width menu items */
+	#nav ul {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+	}
+
+	#nav ul li {
+		padding: 1rem;
+		text-align: center;
+		width: 100%;
+		border-bottom: 1px solid #ccc;
+	}
+
+	#nav ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 18px;
+	}
+
+	/* Right-hand Buttons */
 	.login-btn {
 		display: none;
 	}
@@ -334,12 +372,6 @@ button.dark-mode-toggle {
 		margin-right: 25px;
 		margin-top: 0;
 		order: 3;
-	  }
-
-
-	/* L Phone Dark Mode Styles */
-	.dark-mode .login-btn {
-		display: none;
 	}
 }
 
@@ -347,18 +379,16 @@ button.dark-mode-toggle {
 @media screen and (max-width: 390px) {
 
 	/* L Phone Wrapper */
-    #header-wrapper {
-        padding: 3em 0 0.5em 0;
-    }
+	#header-wrapper {
+		padding: 3em 0 0.5em 0;
+	}
 
 	#header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0px 12px 0px;
-        margin-top: -50px;
-        position: relative;
-    }
-
-	
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0px 12px 0px;
+		margin-top: -50px;
+		position: relative;
+	}
 }
