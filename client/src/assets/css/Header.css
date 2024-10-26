@@ -326,7 +326,8 @@ button.dark-mode-toggle {
 		top: 100%; /* Position right below the header */
 		left: 0;
 		width: 100%;
-		background-color: #333;
+		background-color: #A59398;
+		border: 1px #ccc solid;
 		z-index: 999;
 	}
 
