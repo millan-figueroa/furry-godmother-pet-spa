@@ -1,13 +1,8 @@
-/* eslint-disable no-unused-vars */
-//Import useState to capture customer selections and control form data.
 import React, { useState } from 'react';
-//Import react-calendar to create a ready-made interactive calendar.
 import Calendar from 'react-calendar';
-//Import useNavigate to redirect the user back to the Home page after booking.
 import { useNavigate } from 'react-router-dom';
-import '../assets/css/Booking.css'; 
+import '../assets/css/Booking.css';
 
-//Define variables for dropdown menus. These could be saved in MongoDB instead to make them updateable in a UI element.
 const services = [
     'Small dog bath (less than 20lbs)',
     'Medium dog bath (21 - 40lbs)',
@@ -22,11 +17,9 @@ const groomers = [
     'Simón Bolívar',
     'Isabel Allende',
     'Jose Artigas'
-]
+];
 
 const Booking = () => {
-
-    // Define state variables for form elements
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [date, setDate] = useState(new Date());
@@ -34,30 +27,38 @@ const Booking = () => {
     const [groomer, setGroomer] = useState('');
     const navigate = useNavigate();
 
-    // Function to handle submissions, prevents default HTML actions (like page reload)
     const handleSubmit = async (e) => {
         e.preventDefault();
         const response = await fetch('http://localhost:5000/api/bookings', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, date, service, groomer }),
-    });
+        });
 
-    // Successful booking message
         if (response.ok) {
             alert(`Booking for ${name} on ${date.toLocaleDateString()} was successful! Email confirmation sent to ${email}!`);
             navigate('/');
         } else {
-            alert('Booking failed. Please try again.')
+            alert('Booking failed. Please try again.');
         }
     };
 
+    const handleDateChange = (newDate) => setDate(newDate);
 
-    // Options for services & groomer dropdowns
+    const tileContent = ({ date, view }) => {
+        if (view === 'month' && date.getDay() === 5) {
+            return <p className="tile-icon">📅</p>;
+        }
+    };
+
+    const tileClassName = ({ date, view }) => {
+        if (view === 'month' && date.getDay() === 0) {
+            return 'sunday-tile';
+        }
+    };
+
     return (
-        <div>
+        <div id="booking-container">
             <h2>Book a Service</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -80,12 +81,15 @@ const Booking = () => {
                         required
                     />
                 </div>
-                <div>
-                    <label >Date:</label>
-                    {/*See https://www.npmjs.com/package/react-calendar for available config options*/}
+                <div className="calendar-container">
+                    <label>Date:</label>
                     <Calendar
-                        onChange={setDate}
+                        onChange={handleDateChange}
                         value={date}
+                        tileContent={tileContent}
+                        tileClassName={tileClassName}
+                        calendarType="gregory"
+                        className="custom-calendar"
                         required
                     />
                     <p>Selected Date: {date.toLocaleDateString()}</p>
@@ -100,7 +104,7 @@ const Booking = () => {
                     >
                         <option value="" disabled>Select a service</option>
                         {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                            <option key={index} value={service}>{service}</option>
                         ))}
                     </select>
                 </div>
@@ -113,7 +117,7 @@ const Booking = () => {
                     >
                         <option value="" disabled>Select a groomer (optional)</option>
                         {groomers.map((groomer, index) => (
-                        <option key={index} value={groomer}>{groomer}</option>
+                            <option key={index} value={groomer}>{groomer}</option>
                         ))}
                     </select>
                 </div>
@@ -122,6 +126,5 @@ const Booking = () => {
         </div>
     );
 };
-
 
 export default Booking;
